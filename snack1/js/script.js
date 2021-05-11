@@ -19,12 +19,15 @@ var  biciclette = [
         nome:"BMX",
         peso:20
     }
-]
+];
 
-var minore = 0;
+// Math.min(12,10,13,20);
+
+var pesoMinore = [];
 
 for(var i = 0; i<biciclette.length; i++){
-    minore = Math.min(biciclette[i].peso);
+   pesoMinore.push(biciclette[i].peso);
+   pesoMinore.sort();
 }
 
-console.log(minore);
+console.log(pesoMinore[0]);
