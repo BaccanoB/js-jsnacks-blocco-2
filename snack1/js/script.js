@@ -23,11 +23,10 @@ var  biciclette = [
 
 // Math.min(12,10,13,20);
 
-var pesoMinore = [];
-
-for(var i = 0; i<biciclette.length; i++){
-   pesoMinore.push(biciclette[i].peso);
-   pesoMinore.sort();
+var minimo = 0;
+for(var i = 1; i<biciclette.length; i++){
+   if (biciclette[i].peso < biciclette[minimo].peso) {
+        minimo = i;
+   }
 }
-
-console.log(pesoMinore[0]);
+console.log("La bici con peso minore è: " + biciclette[minimo].nome);

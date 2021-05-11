@@ -4,15 +4,14 @@
 function newArray (array,a,b){
     var arrayNuovo = [];
     for (var i = 0; i<array.length; i++){
-       if(array[i] > a && array[i] < b){
+       if(i > a && i < b){
             arrayNuovo.push(array[i])
        }
-
     }
     return arrayNuovo;
 }
 
-var arrayNumeri = [1,2,3,4,5,6];
+var arrayNumeri = [1,"ciao",3,4,5,6];
 
-var nuovoArray = newArray(arrayNumeri,3,5);
+var nuovoArray = newArray(arrayNumeri,0,5);
 console.log(nuovoArray);
